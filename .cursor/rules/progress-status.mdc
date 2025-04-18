@@ -1,0 +1,10 @@
+---
+description: Keeping track of progress of project
+globs: 
+alwaysApply: true
+---
+
+# Your rule content
+
+- [progress-status.md](mdc:progress-status.md)
+- Update Progress Status document after task completion.

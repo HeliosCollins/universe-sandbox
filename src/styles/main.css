@@ -1,0 +1,11 @@
+/* Main CSS for BlobVerse */
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #1e1e1e;
+}
+
+canvas {
+  display: block;
+}
