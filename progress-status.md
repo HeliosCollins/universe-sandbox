@@ -16,10 +16,11 @@ This document tracks the progress of the BlobVerse ECS Scaffold project.
 
 - [x] Implemented `toolbar.js` with entity creation tools
 
-  - Added "+" Node button for base entity creation
-  - Created component toggle sections (Forces and Behaviors)
-  - Implemented entity selection and component attachment
-  - Added visual indicators for selected entities
+  - Redesigned with icon-only interface and tooltips
+  - Created status display showing current mode/selection
+  - Implemented component-focused interface that emphasizes node unification
+  - Improved visual feedback with selection highlights
+  - Added clear section headers to organize functionality
 
 - [x] Implemented `paramPanel.js` with parameter adjustment tools
   - Created global parameter controls (Gravity Strength, Speed Multiplier)
@@ -80,16 +81,27 @@ This document tracks the progress of the BlobVerse ECS Scaffold project.
   - Test state persistence
   - Add URL sharing capabilities with lz-string compression
 
+### Performance Optimization
+
+- [ ] Implement spatial partitioning for collision and force systems
+  - Replace naive O(n²) checks with spatial grid or quadtree
+  - Optimize for large numbers of entities
+  - Add grid visualization option for debugging
+
 ## Next Steps
 
-The next priority is to implement the save/load functionality to allow users to save their simulations and share them. Following that, we can focus on polish items such as drag-to-select, undo/redo, and heatmap visualizations.
+1. Implement save/load functionality to allow users to save and share simulations
+2. Add spatial partitioning for better performance with many entities
+3. Add more component types (Wander, Flocking behavior, etc.)
+4. Improve selection controls (multi-select, delete selected)
+5. Add visual enhancements (heat-map visualization, trail effects)
 
 ## Notes
 
-- The new node-based architecture makes it easier to add new component types and behaviors
+- The new icon-based toolbar with tooltips provides a cleaner, more intuitive interface
+- The node-based architecture makes it easier to add new component types and behaviors
 - Entities are now created as base nodes and users can add/remove components at runtime
 - Force system now supports multiple force types (radial forces and zone/directional forces)
 - Collision system now prevents entities from passing through obstacles
 - Rule system allows for complex behaviors like destroying followers when they hit obstacles
-- UI components are now functional but may need styling adjustments
 - Path system now supports setting direction for followers, but could be extended with multiple waypoints in the future
